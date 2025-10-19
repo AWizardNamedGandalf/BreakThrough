@@ -1,6 +1,7 @@
 extends RigidBody2D
-var impulse = Vector2(100,0)
 
 func _ready() -> void:
-	apply_central_impulse(impulse)
-	print("I'm Alive!!")
+	var impulse_strength = 100
+	var angle = rotation
+	apply_central_impulse(Vector2(cos(angle), sin(angle)) * impulse_strength)
+	
