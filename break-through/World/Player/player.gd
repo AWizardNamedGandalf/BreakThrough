@@ -2,6 +2,8 @@ extends RigidBody2D
 
 @export var thrust_force: float = 500
 @export var turn_speed: float = 5
+@export var Bullet : PackedScene
+@onready var gun: Node2D = $Gun
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	var direction = Vector2.ZERO
@@ -26,6 +28,17 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 		direction.y -= 1
 	if Input.is_action_pressed("down"):
 		direction.y += 1
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
 		
 	state.apply_force(direction * thrust_force)
 	state.angular_velocity = angle_diff * turn_speed
+	print(gun.global_rotation)
+
+func shoot():
+	var b = Bullet.instantiate()
+	b.rotation = gun.global_rotation
+	owner.add_child(b)
+	b.transform = gun.global_transform
+	
+	
