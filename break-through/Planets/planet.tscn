@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://8hovjcpybj8x"]
+
+[ext_resource type="Texture2D" uid="uid://7n3jkgqsjr5n" path="res://Materials/Square.png" id="1_lbeam"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_agfjw"]
+size = Vector2(37, 35)
+
+[node name="Planet" type="RigidBody2D"]
+modulate = Color(1.8650665e-07, 0.0866011, 0.12583107, 1)
+mass = 1000.0
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(36.690754, 35.125)
+texture = ExtResource("1_lbeam")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_agfjw")
