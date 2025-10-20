@@ -33,7 +33,6 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 		
 	state.apply_force(direction * thrust_force)
 	state.angular_velocity = angle_diff * turn_speed
-	print(gun.global_rotation)
 
 func shoot():
 	var b = Bullet.instantiate()
