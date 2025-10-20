@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://2ktpokeudcpr"]
+
+[ext_resource type="Texture2D" uid="uid://7n3jkgqsjr5n" path="res://Materials/Square.png" id="1_36f5u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_agfjw"]
+size = Vector2(60.000015, 60.000015)
+
+[node name="Planet" type="RigidBody2D"]
+modulate = Color(1.8650665e-07, 0.0866011, 0.12583107, 1)
+mass = 600.0
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(60, 60)
+texture = ExtResource("1_36f5u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7.1525574e-07, -7.1525574e-07)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_agfjw")
