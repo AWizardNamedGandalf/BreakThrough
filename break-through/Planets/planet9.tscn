@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bgjn4cfsu8sfd"]
+[gd_scene load_steps=4 format=3 uid="uid://bgjn4cfsu8sfd"]
 
 [ext_resource type="Texture2D" uid="uid://7n3jkgqsjr5n" path="res://Materials/Square.png" id="1_dr5l8"]
+[ext_resource type="Script" uid="uid://bg1l8mwmk28a" path="res://Planets/planet_9.gd" id="1_p1wa0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_agfjw"]
 size = Vector2(90.00002, 90.00002)
@@ -9,6 +10,8 @@ size = Vector2(90.00002, 90.00002)
 modulate = Color(1.8650665e-07, 0.0866011, 0.12583107, 1)
 mass = 900.0
 gravity_scale = 0.0
+inertia = 900.0
+script = ExtResource("1_p1wa0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(90, 90)
