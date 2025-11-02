@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0kn6sm5mnarr"]
+
+[ext_resource type="Texture2D" uid="uid://7n3jkgqsjr5n" path="res://Materials/Square.png" id="1_7h4r7"]
+[ext_resource type="Script" uid="uid://dtv2rqxlw27vn" path="res://World/Enemies/shooter_enemy.gd" id="1_s71m1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s71m1"]
+size = Vector2(5, 5)
+
+[node name="Shooter_Enemy" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_s71m1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_s71m1")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+scale = Vector2(5, 5)
+texture = ExtResource("1_7h4r7")
+
+[node name="Gun" type="Node2D" parent="."]

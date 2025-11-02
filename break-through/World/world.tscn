@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d2k8ltteoko5s"]
+[gd_scene load_steps=13 format=3 uid="uid://d2k8ltteoko5s"]
 
 [ext_resource type="PackedScene" uid="uid://c8xb6s7xev1n3" path="res://World/Player/player.tscn" id="1_8a836"]
 [ext_resource type="PackedScene" uid="uid://8hovjcpybj8x" path="res://Planets/planet1.tscn" id="4_k8do8"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://deuobait08dr6" path="res://Planets/planet7.tscn" id="10_kcyjf"]
 [ext_resource type="PackedScene" uid="uid://lmr6clisuvfh" path="res://Planets/planet8.tscn" id="11_xw5lg"]
 [ext_resource type="PackedScene" uid="uid://bgjn4cfsu8sfd" path="res://Planets/planet9.tscn" id="12_0lysu"]
+[ext_resource type="PackedScene" uid="uid://b0kn6sm5mnarr" path="res://World/Enemies/shooter_enemy.tscn" id="12_h2aik"]
 [ext_resource type="PackedScene" uid="uid://c1t665ej2lr1f" path="res://Planets/planet10.tscn" id="13_26uyv"]
 
 [node name="World" type="Node"]
@@ -46,3 +47,6 @@ position = Vector2(-234, -351)
 
 [node name="Planet10" parent="." instance=ExtResource("13_26uyv")]
 position = Vector2(-48, -252)
+
+[node name="Shooter_Enemy" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(38, -14)
