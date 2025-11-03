@@ -8,6 +8,8 @@ size = Vector2(5, 5)
 
 [node name="Shooter_Enemy" type="RigidBody2D"]
 gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 1
 script = ExtResource("1_s71m1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -18,3 +20,5 @@ scale = Vector2(5, 5)
 texture = ExtResource("1_7h4r7")
 
 [node name="Gun" type="Node2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

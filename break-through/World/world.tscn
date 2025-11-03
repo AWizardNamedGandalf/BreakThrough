@@ -50,3 +50,33 @@ position = Vector2(-48, -252)
 
 [node name="Shooter_Enemy" parent="." instance=ExtResource("12_h2aik")]
 position = Vector2(38, -14)
+
+[node name="Shooter_Enemy2" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(-33, -15)
+
+[node name="Shooter_Enemy3" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(19, 47)
+
+[node name="Shooter_Enemy4" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(-15, 5)
+
+[node name="Shooter_Enemy5" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(-51, 2)
+
+[node name="Shooter_Enemy6" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(-41, -47)
+
+[node name="Shooter_Enemy7" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(35, -44)
+
+[node name="Shooter_Enemy8" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(93, -25)
+
+[node name="Shooter_Enemy9" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(80, 11)
+
+[node name="Shooter_Enemy10" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(50, 23)
+
+[node name="Shooter_Enemy11" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(50, 23)
