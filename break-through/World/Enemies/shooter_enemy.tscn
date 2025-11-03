@@ -7,12 +7,10 @@
 size = Vector2(5, 5)
 
 [node name="Shooter_Enemy" type="RigidBody2D"]
-mass = 0.1
 gravity_scale = 0.0
 contact_monitor = true
 max_contacts_reported = 1
 script = ExtResource("1_s71m1")
-speed = 25
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_s71m1")
