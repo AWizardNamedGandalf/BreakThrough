@@ -4,7 +4,7 @@ var track : bool = false
 var touched_based : bool = false
 var distance : float = 0
 @onready var player = get_tree().get_nodes_in_group("player")[0]
-@onready var enemy_base = get_tree().get_nodes_in_group("enemy_base")[0]
+@onready var enemy_base = get_tree().get_nodes_in_group("tracker_base")[0]
 @export var speed = 25
 
 func _ready():
