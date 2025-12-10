@@ -38,7 +38,7 @@ func _on_body_entered(body):
 		print("player contacted")
 		touched_based = false
 		track = false
-	if body.is_in_group("enemy_base"):
+	if body.is_in_group("tracker_base"):
 		print("mothership contacted")
 		touched_based = true
 		track = true

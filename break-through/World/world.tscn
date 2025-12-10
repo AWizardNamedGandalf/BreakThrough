@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d2k8ltteoko5s"]
+[gd_scene load_steps=16 format=3 uid="uid://d2k8ltteoko5s"]
 
 [ext_resource type="PackedScene" uid="uid://c8xb6s7xev1n3" path="res://World/Player/player.tscn" id="1_8a836"]
 [ext_resource type="PackedScene" uid="uid://8hovjcpybj8x" path="res://Planets/planet1.tscn" id="4_k8do8"]
@@ -13,6 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://b0kn6sm5mnarr" path="res://World/Friendlies/tracker.tscn" id="12_h2aik"]
 [ext_resource type="PackedScene" uid="uid://cp3hd36sutb5" path="res://World/Enemies/enemy_base.tscn" id="13_0wqet"]
 [ext_resource type="PackedScene" uid="uid://c1t665ej2lr1f" path="res://Planets/planet10.tscn" id="13_26uyv"]
+[ext_resource type="Texture2D" uid="uid://7n3jkgqsjr5n" path="res://Materials/Square.png" id="14_awrha"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f23eu"]
 
 [node name="World" type="Node"]
 
@@ -54,3 +57,43 @@ position = Vector2(171, -9)
 
 [node name="Tracker" parent="." instance=ExtResource("12_h2aik")]
 position = Vector2(-66, 53)
+
+[node name="Tracker2" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(49, 58)
+
+[node name="Tracker3" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(41, 10)
+
+[node name="Tracker4" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(1, -34)
+
+[node name="Tracker5" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(-62, -20)
+
+[node name="Tracker6" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(-97, 34)
+
+[node name="Tracker7" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(-114, 69)
+
+[node name="Tracker8" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(-138, 32)
+
+[node name="Tracker9" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(-113, -12)
+
+[node name="Tracker10" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(-23, 108)
+
+[node name="TrackerBase" type="RigidBody2D" parent="." groups=["tracker_base"]]
+position = Vector2(-20, 9)
+mass = 1000.0
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrackerBase"]
+shape = SubResource("RectangleShape2D_f23eu")
+
+[node name="Sprite2D" type="Sprite2D" parent="TrackerBase"]
+position = Vector2(4.7683716e-07, 0)
+scale = Vector2(20.000002, 20)
+texture = ExtResource("14_awrha")
