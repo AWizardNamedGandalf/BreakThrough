@@ -16,6 +16,7 @@ Bullet = ExtResource("2_6ry63")
 shape = SubResource("RectangleShape2D_l8h54")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+modulate = Color(0.45836538, 0, 0.08237461, 1)
 position = Vector2(1.1920929e-07, 1.1920929e-07)
 scale = Vector2(5, 5)
 texture = ExtResource("1_l8h54")

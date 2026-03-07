@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://dg5afo7nxhs2i"]
+
+[ext_resource type="Texture2D" uid="uid://s7l7n361qvde" path="res://Materials/TileMap.png" id="1_dpm5s"]
+[ext_resource type="Script" uid="uid://ps4jnf4psh2p" path="res://World/tile_map_layer.gd" id="2_cxm25"]
+[ext_resource type="PackedScene" uid="uid://c8xb6s7xev1n3" path="res://World/Player/player.tscn" id="3_n43i6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fjm1e"]
+texture = ExtResource("1_dpm5s")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_n7d2u"]
+sources/2 = SubResource("TileSetAtlasSource_fjm1e")
+
+[node name="LevelOne" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+modulate = Color(0.19434929, 0.19434926, 0.19434926, 1)
+tile_set = SubResource("TileSet_n7d2u")
+script = ExtResource("2_cxm25")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -500000.0
+offset_top = -500000.0
+offset_right = 500000.0
+offset_bottom = 500000.0
+color = Color(0.18359044, 0.18359044, 0.18359044, 1)
+
+[node name="Player" parent="." instance=ExtResource("3_n43i6")]
+gravity_scale = 0.0
